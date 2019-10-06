@@ -1,4 +1,6 @@
-
+<?php
+  session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -30,12 +32,27 @@
             <li class="nav-item active">
               <a class="nav-link" href="event.php">Секции</a>
             </li>
-			<li class="nav-item">
-              <a class="nav-link" href="profile.php">Личный кабинет</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">О нас</a>
-            </li>
+            <?php 
+              if(isset($_SESSION['username']))
+                {?>
+                  <li class="nav-item">
+                    <a class="nav-link" href="profile.php">Личный кабинет</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="exit.php">Выйти</a>
+                  </li> 
+                  <?php
+                } 
+              else
+              {?>
+                <li class="nav-item">
+                <a class="nav-link" href="entry.php">Войти</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" href="registration.php">Регистрация</a>
+                </li> <?php
+              }
+            ?>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
