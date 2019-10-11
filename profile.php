@@ -41,6 +41,9 @@
 						<a class="nav-link" href="profile.php">Личный кабинет</a>
 					</li>
 					<li class="nav-item">
+						<a class="nav-link" href="event/create.php">Добавить мероприятие</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link" href="exit.php">Выйти</a>
 					</li>
 				</ul>

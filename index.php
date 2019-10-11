@@ -1,5 +1,6 @@
 <?php
   session_start();
+  require "connection.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -37,6 +38,9 @@
               {?>
                 <li class="nav-item">
                   <a class="nav-link" href="profile.php">Личный кабинет</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="event/create.php">Добавить мероприятие</a>
                 </li> 
                 <li class="nav-item">
                   <a class="nav-link" href="exit.php">Выйти</a>
@@ -87,42 +91,8 @@
         <br><br>
 
         <!-- START THE FEATURETTES -->
-
-        <hr class="featurette-divider">
-        <br><br>
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">Конструирование <span class="text-muted">Ериной Юлии Михайловны</span></h2>
-            <p class="lead">Моделирование и конструирование способствуют познанию мира техники и расширению технического кругозора, развивают конструкторские способности, техническое мышление, мотивацию к творческому поиску, технической деятельности. </p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="images\event4.jpg" alt="Generic placeholder image">
-          </div>
-        </div>
-        <br><br>
-        <hr class="featurette-divider">
-        <br><br>
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Мероприятие по ПДД <span class="text-muted">в детком саду "Заря"</span></h2>
-            <p class="lead">В детском саду прошло мероприятие, направленное на профилактику дорожно-транспортного травматизма. Основной целью проведения мероприятия является: формирование представлений детей о правилах дорожного движения и дорожных знаках.Разработана и проведена интегрированная образовательная деятельность в группе: НОД по образовательной области «Познавательное развитие» на тему «Азбука пешехода», где у детей формировались основы безопасного поведения на улице; познакомились со строением улицы и дорожными знаками, предназначенными для водителей и пешеходов, с работой Государственной инспекции безопасности дорожного движения; закрепляли правила дорожного движения, применяли знания, полученные ранее в практической деятельности.</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" src="images\event2.png" alt="Generic placeholder image">
-          </div>
-        </div>
-        <br><br>
-        <hr class="featurette-divider">
-        <br><br>
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">Алло, мы ищем таланты. <span class="text-muted">+Фото.</span></h2>
-            <p class="lead">Конкурс талантов для детей - это стремление совершенствовать свои таланты, достигать цели, стремиться к результату. Но нужно отличать стремление ребёнка и ваше (родителя). Втягивание ребёнка в конкурсы для реализации родительских амбиций может привести к психологическим проблемам.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="images\event1.jpg" alt="Generic placeholder image">
-          </div>
-        </div>
+        <?php require "event/eventList.php"; ?>
+       
       </div><!-- /.container -->
     </div>
     <footer class="container">
