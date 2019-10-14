@@ -1,5 +1,12 @@
 
 <hr class="featurette-divider">
+        <?php 
+        if($_GET['status'] == "edit")
+        { ?>
+          <a href="edit/update.php?id=<?=$id?>" class="btn btn-warning active float-right" role="button" aria-pressed="true">Редактировать</a>
+          <a href="edit/delete.php?id=<?=$id?>" class="btn btn-danger active float-right" role="button" aria-pressed="true">Удалить</a>
+          <br>
+        <?php } ?>
         <br><br>
         <div class="row featurette">
           <div class="col-md-7">

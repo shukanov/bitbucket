@@ -7,5 +7,6 @@
     $title = $row['title'];
     $desc = $row['description'];
     $img = $row['img'];
+    $id = $row['id'];
     require "_event.php";
   }     

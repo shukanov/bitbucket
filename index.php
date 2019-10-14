@@ -89,7 +89,16 @@
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
         <br><br>
-
+        <?php 
+          if($_GET['status'] == "edit")
+          { ?>
+            <a href="/" class="btn btn-success active" role="button" aria-pressed="true">Отменить</a>
+          <?php } 
+          else
+          {?>
+          <a href="index.php?status=edit" class="btn btn-success active" role="button" aria-pressed="true">Редактировать</a>
+          <?php }
+        ?>
         <!-- START THE FEATURETTES -->
         <?php require "event/eventList.php"; ?>
        
