@@ -3,8 +3,8 @@
         <?php 
         if($_GET['status'] == "edit")
         { ?>
-          <a href="edit/update.php?id=<?=$id?>" class="btn btn-warning active float-right" role="button" aria-pressed="true">Редактировать</a>
-          <a href="edit/delete.php?id=<?=$id?>" class="btn btn-danger active float-right" role="button" aria-pressed="true">Удалить</a>
+          <a href="edit/form_update_event.php?id=<?=$id?>" class="btn btn-warning active float-right" role="button" aria-pressed="true">Редактировать</a>
+          <a href="edit/delete_event.php?id=<?=$id?>" class="btn btn-danger active float-right" role="button" aria-pressed="true">Удалить</a>
           <br>
         <?php } ?>
         <br><br>

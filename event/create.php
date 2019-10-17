@@ -1,8 +1,8 @@
 <?php
 	session_start();
-	if(!(isset($_SESSION['username'])))
+	if(!(isset($_SESSION['login'])))
 	{
-		header("Location: entry.php");
+		header("Location: registration/entry.php");
 		exit;
 	}
 	require "../connection.php";
@@ -35,14 +35,17 @@
 						<a class="nav-link" href="/">Главная <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="event.php">Секции</a>
+						<a class="nav-link" href="../event.php">Секции</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="profile.php">Личный кабинет</a>
+						<a class="nav-link" href="../profile.php">Личный кабинет</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="exit.php">Выйти</a>
+						<a class="nav-link" href="../exit.php">Выйти</a>
 					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><?=$_SESSION['login']?></a>
+					</li> 
 				</ul>
 				<form class="form-inline mt-2 mt-md-0">
 					<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">

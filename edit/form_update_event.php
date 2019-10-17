@@ -64,7 +64,7 @@ foreach($dbh->query($requery) as $row)
         <div class="alert alert-primary text-center" role="alert">
             Изменение мероприятия
         </div>
-        <form action="UpdateEvent.php" method="POST" enctype="multipart/form-data">
+        <form action="update_event.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Название</label>
                 <input type="text" class="form-control" name="title" id="exampleFormControlInput1" value="<?=$title?>">

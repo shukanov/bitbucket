@@ -33,7 +33,7 @@
               <a class="nav-link" href="event.php">Секции</a>
             </li>
             <?php 
-              if(isset($_SESSION['username']))
+              if(isset($_SESSION['login']))
                 {?>
                   <li class="nav-item">
                     <a class="nav-link" href="profile.php">Личный кабинет</a>
@@ -44,15 +44,18 @@
                   <li class="nav-item">
                     <a class="nav-link" href="exit.php">Выйти</a>
                   </li> 
+                  <li class="nav-item">
+                  <a class="nav-link" href="#"><?=$_SESSION['login']?></a>
+                </li> 
                   <?php
                 } 
               else
               {?>
                 <li class="nav-item">
-                <a class="nav-link" href="entry.php">Войти</a>
+                <a class="nav-link" href="registration/entry.php">Войти</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link disabled" href="registration.php">Регистрация</a>
+                <a class="nav-link disabled" href="registration/reg.php">Регистрация</a>
                 </li> <?php
               }
             ?>

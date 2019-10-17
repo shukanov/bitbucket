@@ -2,9 +2,9 @@
 header('Content-Type: text/plain; charset=utf-8');
 
 session_start();
-if(!(isset($_SESSION['username'])))
+if(!(isset($_SESSION['login'])))
 {
-    header("Location: entry.php");
+    header("Location: registration/entry.php");
     exit;
 }
 require "../connection.php";
